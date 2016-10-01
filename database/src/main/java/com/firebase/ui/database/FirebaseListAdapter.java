@@ -127,6 +127,12 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
         // http://stackoverflow.com/questions/5100071/whats-the-purpose-of-item-ids-in-android-listview-adapter
         return mSnapshots.getItem(i).getKey().hashCode();
     }
+    
+    // get the key of the node. 
+    public String getItemKey(int i) {
+        return mSnapshots.getItem(i).getKey();
+    }
+    
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
